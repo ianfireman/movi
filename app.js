@@ -15,16 +15,58 @@ var progGainAmp = '4096'; // see index.js for allowed values for your chip
 
 //somewhere to store our reading   
 var reading  = 0;  
+var channel0 = 0;
+var channel1 = 0;
+var channel2 = 0;
+
 if(!adc.busy)  
 {  
-  adc.readADCSingleEnded(channel, progGainAmp, samplesPerSecond, function(err, data) {   
+  getChannel0(function(channel0Data) {
+    channel0 = channel0Data;
+    getChannel1(function(channel1Data) {
+      channel1 = channel1Data;
+      getChannel2(function(channel2Data) {
+        channel2 = channel2Data;
+      });
+    });
+  });
+} 
+
+function getChannel0(cb) {
+  adc.readADCSingleEnded(0, progGainAmp, samplesPerSecond, function(err, data) {   
     if(err)  
     {  
       //logging / troubleshooting code goes here...  
       throw err;  
     }  
     // if you made it here, then the data object contains your reading!  
-    reading = data;  
+    cb(data);  
     // any other data processing code goes here...  
-  );  
-} 
+  });  
+}
+
+function getChannel1(cb) {
+  adc.readADCSingleEnded(1, progGainAmp, samplesPerSecond, function(err, data) {   
+    if(err)  
+    {  
+      //logging / troubleshooting code goes here...  
+      throw err;  
+    }  
+    // if you made it here, then the data object contains your reading!  
+    cb(data);  
+    // any other data processing code goes here...  
+  });  
+}
+
+function getChannel2(cb) {
+  adc.readADCSingleEnded(2, progGainAmp, samplesPerSecond, function(err, data) {   
+    if(err)  
+    {  
+      //logging / troubleshooting code goes here...  
+      throw err;  
+    }  
+    // if you made it here, then the data object contains your reading!  
+    cb(data);  
+    // any other data processing code goes here...  
+  });  
+}
