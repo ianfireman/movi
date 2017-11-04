@@ -3,6 +3,8 @@ var chip = 0; //0 for ads1015, 1 for ads1115
 
 //Simple usage (default ADS address on pi 2b or 3):
 var adc = new ads1x15(chip); 
+var adc2 = new ads1x15(chip); 
+var adc3 = new ads1x15(chip); 
 
 // Optionally i2c address as (chip, address) or (chip, address, i2c_dev)
 // So to use  /dev/i2c-0 use the line below instead...:
@@ -49,7 +51,7 @@ function getChannel0(cb) {
 }
 
 function getChannel1(cb) {
-  adc.readADCSingleEnded(1, progGainAmp, samplesPerSecond, function(err, data) {   
+  adc2.readADCSingleEnded(1, progGainAmp, samplesPerSecond, function(err, data) {   
     if(err)  
     {  
       //logging / troubleshooting code goes here...  
@@ -62,7 +64,7 @@ function getChannel1(cb) {
 }
 
 function getChannel2(cb) {
-  adc.readADCSingleEnded(2, progGainAmp, samplesPerSecond, function(err, data) {   
+  adc3.readADCSingleEnded(2, progGainAmp, samplesPerSecond, function(err, data) {   
     if(err)  
     {  
       //logging / troubleshooting code goes here...  
