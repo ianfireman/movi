@@ -7,8 +7,12 @@ var myPythonScriptPath = 'scripts/differential.0.py';
 // Use python shell
 var PythonShell = require('python-shell');
 var pyshell = new PythonShell(myPythonScriptPath);
+// Use mqtt broker PubSub
+const mqtt = require('mqtt')
+const publisher = mqtt.connect('mqtt://localhost:1883')
 
 pyshell.on('message', function (message) {
     // received a message sent from the Python script (a simple "print" statement)
     console.log(message);
+    publisher.publish('movi/info', message.toString());
 });
