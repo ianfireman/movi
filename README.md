@@ -1,7 +1,7 @@
-# movi - therapeutic wareables
+# movi - therapeutic weareables
 
 ## Big Idea
-* Wareables & Healthcare
+* Weareables & Healthcare
 
 ## Essential Question
 * How to help people with motor coordination problems in therapy process
