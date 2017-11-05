@@ -1,1 +1,2 @@
-print("asd")
+while(True) :
+    print("asd")
