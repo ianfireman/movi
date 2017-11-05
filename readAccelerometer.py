@@ -3,7 +3,7 @@
 # Author: Tony DiCola
 # License: Public Domain
 import time
-
+import sys
 # Import the ADS1x15 module.
 import Adafruit_ADS1x15
 
