@@ -1,4 +1,4 @@
-var myPythonScriptPath = 'readAccelerometer.py';
+var myPythonScriptPath = 'scripts/differential.0.py';
 
 // Use python shell
 var PythonShell = require('python-shell');
