@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ianfireman/movi#readme",
   "dependencies": {
-    "node-ads1x15": "^1.0.0"
+    "node-ads1x15": "^1.0.0",
+    "python-shell": "^0.4.0"
   }
 }

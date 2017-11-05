@@ -29,10 +29,6 @@ adc = Adafruit_ADS1x15.ADS1115()
 # See table 3 in the ADS1015/ADS1115 datasheet for more info on gain.
 GAIN = 1
 
-print('Reading ADS1x15 values, press Ctrl-C to quit...')
-# Print nice channel column headers.
-print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*range(4)))
-print('-' * 37)
 # Main loop.
 while True:
     # Read all the ADC channel values in a list.
@@ -48,6 +44,6 @@ while True:
         # Each value will be a 12 or 16 bit signed integer value depending on the
         # ADC (ADS1015 = 12-bit, ADS1115 = 16-bit).
     # Print the ADC values.
-    print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*values))
+    print(values[1])
     # Pause for half a second.
     time.sleep(0.5)

@@ -1,8 +1,10 @@
-var spawn = require('child_process').spawn,
-  py = spawn('python', ['readAccelerometer.py']);
+var myPythonScriptPath = 'readAccelerometer.py';
 
-py.stdout.on('data', function (data) {
-  console.log(data);
+// Use python shell
+var PythonShell = require('python-shell');
+var pyshell = new PythonShell(myPythonScriptPath);
+
+pyshell.on('message', function (message) {
+    // received a message sent from the Python script (a simple "print" statement)
+    console.log(message);
 });
-
-py.stdin.end();
