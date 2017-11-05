@@ -40,9 +40,7 @@ while True:
     # simpletest.py and the read_adc function for more information.
     # Value will be a signed 12 or 16 bit integer value (depending on the ADC
     # precision, ADS1015 = 12-bit or ADS1115 = 16-bit).
-    #print(value)
-    if value <= 1940 and value >= -50:
-        print("Moving: " + str(value))
+    print(str(value))
     sys.stdout.flush()
     # Pause for half a second.
-    time.sleep(0.1)
+    time.sleep(0.5)
