@@ -1,4 +1,7 @@
-# movi - therapeutic weareables
+
+<img src="./Logomakr_4NaDSo.png" width="250">
+
+# therapeutic weareables
 
 ## Big Idea
 * Weareables & Healthcare
