@@ -1,7 +1,7 @@
 
 <img src="./Logomakr_4NaDSo.png" width="250">
 
-# therapeutic weareables
+# therapeutic weareables - Raspberry pi 3 Interface
 
 ## Big Idea
 * Weareables & Healthcare
@@ -17,3 +17,9 @@
 * Abhner Araujo - afga
 * Marcio Mendes - mmcj
 * Ian Fireman - imlbf
+
+Other projects
+
+[Web Interface](https://github.com/ianfireman/movi-web)
+
+[Web API](https://github.com/ianfireman/movi-api)
